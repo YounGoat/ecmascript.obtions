@@ -1,4 +1,4 @@
-#	options2
+#	obtions
 __Function OPTIONS Schema validator.__
 
 To normalise options argument.
@@ -12,12 +12,12 @@ To normalise options argument.
 ##	Links
 
 *	[CHANGE LOG](./CHANGELOG.md)
-*	[Homepage](https://github.com/YounGoat/ecmascript.options2)
+*	[Homepage](https://github.com/YounGoat/ecmascript.obtions)
 
 ##	Get Started
 
 ```javascript
-const options2 = requrie('options2');
+const obtions = requrie('obtions');
 
 const options = {
     Domain: 'www.example.com',
@@ -46,7 +46,7 @@ const def = {
     ],
 };
 
-const po = options2(options, def);
+const po = obtions(options, def);
 // RETURN {
 //     Hostname: 'www.example.com',
 //     port: 8080
@@ -55,8 +55,8 @@ const po = options2(options, def);
 
 ##	API
 
-*	Object __options2__( Object *options*,  Object *def* )
-*	Object __options2__( Object *options* )
+*	Object __obtions__( Object *options*,  Object *def* )
+*	Object __obtions__( Object *options* )
 
 Argument *def* may include following properties:
 *	__def.caseSensitive__ *boolean* DEFAULT `false`
@@ -73,7 +73,7 @@ A column definition may be an object with following properties:
 
 ##  Examples
 
-__options2__ is an easy way to make your function paramemters more friendly. 
+__obtions__ is an easy way to make your function paramemters more friendly. 
 
 ```javascript
 function formatUrl(options) {
@@ -99,7 +99,7 @@ function formatUrl(options) {
         ]
     };
 
-    options = options2(options, optionsDef);
+    options = obtions(options, optionsDef);
 
     // ...
 }

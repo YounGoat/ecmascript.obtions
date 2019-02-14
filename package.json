@@ -8,18 +8,18 @@
     "scripts": {
         "test": "mocha"
     },
-    "name": "options2",
+    "name": "obtions",
     "version": "0.0.1",
     "main": "index.js",
     "keywords": [
         "function-options-schema-validator",
         "json-schema"
     ],
-    "homepage": "https://github.com/YounGoat/ecmascript.options2",
+    "homepage": "https://github.com/YounGoat/ecmascript.obtions",
     "description": "Function OPTIONS Schema validator.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/YounGoat/ecmascript.options2.git"
+        "url": "https://github.com/YounGoat/ecmascript.obtions.git"
     },
     "author": {
         "name": "YounGoat",
