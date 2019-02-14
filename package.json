@@ -1,0 +1,29 @@
+{
+    "bin": {},
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "^3.3.0"
+    },
+    "directories": {},
+    "scripts": {
+        "test": "mocha"
+    },
+    "name": "options2",
+    "version": "0.0.1",
+    "main": "index.js",
+    "keywords": [
+        "function-options-schema-validator",
+        "json-schema"
+    ],
+    "homepage": "https://github.com/YounGoat/ecmascript.options2",
+    "description": "Function OPTIONS Schema validator.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YounGoat/ecmascript.options2.git"
+    },
+    "author": {
+        "name": "YounGoat",
+        "email": "youngoat@163.com",
+        "url": "https://youngoat.github.io"
+    }
+}
