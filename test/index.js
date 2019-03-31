@@ -125,6 +125,30 @@ describe('options2', () => {
         assert.equal(po.port, 8080);
     });
 
+    it('column desc, keyword case-insensitive', () => {
+        assert.throws(() => {
+            const options = {};    
+            parseOptions(options, { 
+                columns: [ 'hostname REQUIRED' ],
+            });
+        });
+
+        const options = {
+            domain: 'www.example.com',
+            subpath: '/index.html'
+        };
+        let po = parseOptions(options, {
+            columns: [ 
+                'hostname ALIAS(domain)',
+                'path ALIAS (subpath)',
+                'port DEFAULT(8080)'
+            ],
+        });
+        assert.equal(po.hostname, 'www.example.com');
+        assert.equal(po.path, '/index.html');
+        assert.equal(po.port, 8080);
+    });
+
     it('column default', () => {
         const options = {};    
         let po = parseOptions(options, { 
@@ -134,4 +158,15 @@ describe('options2', () => {
         });
         assert.equal(po.protocol, 'http');
     });
+
+    it('lite mode, regard arrayed def as def.columns', () => {
+        const options = {};    
+        let po = parseOptions(options, [
+            'protocol DEFAULT("http")',
+            { name: 'port', default: 80 }
+        ]);
+        assert.equal(po.protocol, 'http');
+        assert.equal(po.port, 80);
+    });
+
 });

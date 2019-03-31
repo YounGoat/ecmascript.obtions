@@ -81,6 +81,10 @@ function parseOptions(options, def) {
     // ---------------------------
     // Uniform arguments.
 
+    if (def instanceof Array) {
+        def = { columns: def };
+    }
+
     def = Object.assign({
         caseSensitive : false,
         explicit      : false,

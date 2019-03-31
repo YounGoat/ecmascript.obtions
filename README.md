@@ -8,6 +8,7 @@ To normalise options argument.
 *	[Get Started](#get-started)
 *	[API](#api)
 * 	[Examples](#examples)
+*   [ODL, Option Definition Language](#odl)
 
 ##	Links
 
@@ -55,7 +56,8 @@ const po = obtions(options, def);
 
 ##	API
 
-*	Object __obtions__( Object *options*,  Object *def* )
+*	Object __obtions__( Object *options*, Object *def* )
+*   Object __obtions__( Object *options*, Array *columns* )
 *	Object __obtions__( Object *options* )
 
 Argument *def* may include following properties:
@@ -64,7 +66,7 @@ Argument *def* may include following properties:
 *	__def.explicit__ *boolean* DEFAULT `true`
 *	__def.columns__ *Array* NOT NULL
 
-A column definition may be an object with following properties:
+__columns__ or __def.columns__ is an array made up of one or more column definitions. A column definition may be an object with following properties:
 *   __name__ *string* 
 *   __alias__ *string* | *string[]*
 *   __default__ *any* OPTIONAL
@@ -104,3 +106,22 @@ function formatUrl(options) {
     // ...
 }
 ```
+
+## ODL
+
+OD is abbreviation of __Option Definition Language__ which is a tiny language used to define option. It is an easy alternative for option define object. E.g.
+
+```javascript
+// * The option is named "hostname" , or named with alias "domain" or "domainName". 
+// * The option SHOULD exist.
+'hostname required alias(domain, domainName)'
+
+// * Set default value.
+'number DEFAULT(99)'
+```
+
+Keywords in ODL is __case-insensitive__:
+*   ALIAS
+*   DEFAULT
+*   NOT
+*   REQUIRED
