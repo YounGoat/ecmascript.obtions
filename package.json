@@ -9,7 +9,7 @@
         "test": "mocha"
     },
     "name": "obtions",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "main": "index.js",
     "keywords": [
         "function-options-schema-validator",
@@ -25,5 +25,6 @@
         "name": "YounGoat",
         "email": "youngoat@163.com",
         "url": "https://youngoat.github.io"
-    }
+    },
+    "license": "MIT"
 }
